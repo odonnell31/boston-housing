@@ -10,7 +10,7 @@ from sklearn.cross_validation import ShuffleSplit
 # Import supplementary visualizations code visuals.py
 import visuals as vs
 
-# Pretty display for notebooks
+# Pretty display for notebooks (ipython/jupyter)
 #%matplotlib inline
 
 # Load the Boston housing dataset
@@ -120,8 +120,9 @@ reg = fit_model(X_train, y_train)
 
 # Produce the value for 'max_depth'
 print "Parameter 'max_depth' is {} for the optimal model.".format(reg.get_params()['max_depth'])
+print ""
 
-
+print "Predicting housing prices trials.."
 # Produce a matrix for client data
 client_data = [[5, 17, 15], # Client 1
                [4, 32, 22], # Client 2
