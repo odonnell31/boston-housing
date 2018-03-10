@@ -25,19 +25,17 @@ print features.head(3)
 print prices.head(3)
 print "======"
 
-# TODO: Minimum price of the data
+## Some EDA...
+
+# Minimum price of the data
 minimum_price = np.amin(prices)
-
-# TODO: Maximum price of the data
+# Maximum price of the data
 maximum_price = np.amax(prices)
-
 # TODO: Mean price of the data
 mean_price = np.mean(prices)
-
-# TODO: Median price of the data
+# Median price of the data
 median_price = np.median(prices)
-
-# TODO: Standard deviation of prices of the data
+# Standard deviation of prices of the data
 std_price = np.std(prices)
 
 # Show the calculated statistics
@@ -49,7 +47,7 @@ print "Median price ${:,.2f}".format(median_price)
 print "Standard deviation of prices: ${:,.2f}".format(std_price)
 print "====="
 
-# TODO: Import 'r2_score'
+# Add a performance metric function
 from sklearn.metrics import r2_score
 
 def performance_metric(y_true, y_predict):
@@ -61,3 +59,17 @@ def performance_metric(y_true, y_predict):
     
     # Return the score
     return score
+
+# Test the performance metric function
+#score = performance_metric([3, -0.5, 2, 7, 4.2], [2.5, 0.0, 2.1, 7.8, 5.3])
+#print "TEST: Model has a coefficient of determination, R^2, of {:.3f}.".format(score)
+    
+# Import 'train_test_split' to split data into training and testing sets
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(features, prices, test_size = 0.2, random_state = 31)
+# Success
+print "Training and testing split was successful."
+print "====="
+
+
+
