@@ -128,7 +128,7 @@ def PredictTrials(X, y, fitter, data):
 
     # Display price range
     print ""
-    print "Prediction above for the following house:"
+    print "Predictions above for the following Boston house:"
     print "Bedrooms: 5"
     print "Neighborhood poverty level: 17%"
     print "Student-teacher ratio of nearby schools: 15-1"

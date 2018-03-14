@@ -19,6 +19,7 @@ prices = data['MEDV']
 features = data.drop('MEDV', axis = 1)
     
 # Success
+print "testing..."
 print "Boston housing dataset has {} data points with {} variables each.".format(*data.shape)
 print data.head(3)
 print features.head(3)
@@ -132,5 +133,5 @@ client_data = [[5, 17, 15], # Client 1
 for i, price in enumerate(reg.predict(client_data)):
     print "Predicted selling price for Client {}'s home: ${:,.2f}".format(i+1, price)
     
-    
+print "====="
 vs.PredictTrials(features, prices, fit_model, client_data)
